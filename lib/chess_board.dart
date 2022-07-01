@@ -40,15 +40,15 @@ class ChessBoard extends StatelessWidget {
   }
 
   List<Widget> createCells(int index) {
-    var columnsList = <Widget>[];
+    var cellsList = <Widget>[];
     final firstColor = index % 2 == 0 ? Colors.white : Colors.black;
     final secondColor = firstColor == Colors.white ? Colors.black : Colors.white;
 
     for (int i=0; i<8; i++) {
       final color = i % 2 == 0 ? firstColor : secondColor;
-      columnsList.add(Expanded(child: Container(color: color,)));
+      cellsList.add(Expanded(child: Container(color: color,)));
     }
 
-    return columnsList;
+    return cellsList;
   }
 }
