@@ -33,7 +33,7 @@ class ChessBoard extends StatelessWidget {
     var rowsList = <Widget>[];
 
     for (int i=0; i<8; i++) {
-      rowsList.add(Expanded(child: Row(children: createCells(i),),));
+      rowsList.add(Expanded(child: Row(children: createCells(i)),));
     }
 
     return rowsList;
@@ -46,7 +46,7 @@ class ChessBoard extends StatelessWidget {
 
     for (int i=0; i<8; i++) {
       final color = i % 2 == 0 ? firstColor : secondColor;
-      cellsList.add(Expanded(child: Container(color: color,)));
+      cellsList.add(Expanded(child: Container(color: color)));
     }
 
     return cellsList;
